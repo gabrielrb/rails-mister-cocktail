@@ -1,7 +1,7 @@
 <h1><%= @cocktail.name %></h1>
 
 
-<ul>
+<ol>
   <% @cocktail.doses.each do |dose| %>
     <li>
       <%= dose.ingredient.name %> - <%= dose.description %>
@@ -10,8 +10,8 @@
       <% end %>
     </li>
   <% end %>
-</ul>
+</ol>
 
 
 <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
-<%= link_to 'Back to Cocktails', root_path %>
+<%= link_to 'Back to Cocktails', root_path, class: "btn btn-primary btn-round mt-2" %>
