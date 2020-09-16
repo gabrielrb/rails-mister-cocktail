@@ -1,8 +1,9 @@
 <h1>New Cocktail</h1>
 
 <%= simple_form_for(@cocktail) do |f| %>
-<%= f.input :name %>
-<%= f.submit 'Submit', class: "btn btn-primary btn-round" %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit 'Submit', class: "btn btn-primary btn-round" %>
 <% end %>
 
 <%= link_to "Back to cocktail's list", root_path, class: "btn btn-primary btn-round mt-2" %>
