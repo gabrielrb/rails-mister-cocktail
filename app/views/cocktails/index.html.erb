@@ -1,11 +1,11 @@
 <h1>Cocktails</h1>
   <% @cocktails.each do |cocktail| %>
-      <div class="card-product">
-        <img src="" />
+      <div class="card-product mt-2">
+        <%= cl_image_tag cocktail.photo.key, crop: :fill %>
         <div class="card-product-infos">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
         </div>
       </div>
   <% end %>
 
-<%= link_to "Add a new cocktail", new_cocktail_path %>
+<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary btn-round mt-2" %>
